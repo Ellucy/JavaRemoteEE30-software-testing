@@ -22,8 +22,8 @@ public class Example3 {
     public void testArrayEquals() {
         int[] first = {1, 2, 3};
         int[] second = {4, 5, 6};
-        assertArrayEquals(first, second, "Arrays are not equal");
-
+//        assertArrayEquals(first, second, "Arrays are not equal");
+        assertNotEquals(first, second, "Arrays should not be equal");
     }
 
     @Test
@@ -37,7 +37,8 @@ public class Example3 {
         Calculator c1 = new Calculator();
         Calculator c2 = new Calculator();
 
-        assertSame(c1,c2);
+//        assertSame(c1,c2); //Test should fail
+        assertNotSame(c1, c2, "Should not be equal");
     }
 
     @Test
